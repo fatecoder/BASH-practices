@@ -1,0 +1,24 @@
+#!/bin/bash
+#borrador; voltear un numero 
+number=123
+start=10
+r=0
+saved=0
+echo $number
+
+function reverse {
+  if [ $number -gt $start ];then
+    ((r=$number-$start))
+    echo $r
+    number=$r
+    echo $number
+    ((saved=$saved+1))
+    reverse
+  fi
+  number=$saved
+  reverse
+}
+reverse
+echo outside $r
+echo saved $saved
+echo number $number

@@ -1,0 +1,9 @@
+#!/bin/bash
+#convertir el numero dado en el mes determinado
+months=(January February March April May June July August September Octuber November December)
+
+for (( i=0; i<${#months[@]}; i=i+1 ));do
+  if [ $1 = ${months[i]} ];then
+    echo ${months[i]} $(($i+1))
+  fi
+done

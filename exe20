@@ -1,0 +1,5 @@
+#!/bin/bash
+#extraer el nombre del package instalado 
+#dpkg -l | cut -d " " -f 3 | cat -n | grep "\<$1\>"
+#contar numero de lineas
+dpkg -l | grep -c $

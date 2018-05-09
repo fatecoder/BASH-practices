@@ -1,0 +1,12 @@
+#!/bin/bash
+#calcular descuento
+#precio=$1
+#desc=$(echo "scale=2; $precio-($precio*($2/100))" | bc)
+#calcular precio real
+precioactual=$1
+descuento=$2
+
+precioreal=$(echo "scale=2; ($precioactual*100)/(100-$descuento)" | bc)
+
+echo $precioreal
+

@@ -1,0 +1,12 @@
+#!/bin/bash
+#imprimir un string cierta cantidad de veces
+#$1 string
+#$2 times
+function repeatStr {
+  for (( i=1; i<=$2; i=i+1 ));do
+    str=$str$1
+  done
+  echo $str
+}
+
+repeatStr $1 $2

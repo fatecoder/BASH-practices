@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+free -h | grep "Mem:" | cut -d " " -f 12,20

@@ -1,0 +1,7 @@
+#!/bin/bash
+#remover
+function remove_anchor {
+  str=$1
+  echo "${str%%#*}"
+}
+remove_anchor $1

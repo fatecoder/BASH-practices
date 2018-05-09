@@ -1,0 +1,6 @@
+#!/bin/bash
+
+string=$1
+valor=$2
+
+echo ${string:(($valor*-1)):1}

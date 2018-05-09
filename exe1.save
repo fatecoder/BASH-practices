@@ -1,0 +1,4 @@
+	#!/bin/bash
+#imprimir lineas de tal a tal del archivo
+echo "################ sed"
+sed -n "$1,$2 p" $3

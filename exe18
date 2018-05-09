@@ -1,0 +1,8 @@
+#!/bin/bash
+#OS Name & arq
+NAME=$(uname -v | cut -d "-" -f 2 | cut -d " " -f 1)
+VERSION=$(uname -v | cut -d "~" -f 2 | cut -d "-" -f 1)
+T=$(uname -v | cut -d "-" -f 2 | cut -d " " -f 2)
+echo "OS Name & arq." $NAME $VERSION $T $(uname -m)
+#Os Kernel
+echo "OS Kernel" $(uname -r)

@@ -1,0 +1,8 @@
+#!/bin/bash
+#tiempo que se lleva usando la maquina
+#echo $(date +%H) Hours, $(date +%M) Minutes
+
+#echo "Uptime" $(uptime | cut -d " " -f 5 | cut -d "," -f 1 )
+#echo $(uptime -p)
+
+uptime -p | cut -d "p" -f 2 

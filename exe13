@@ -1,0 +1,7 @@
+#!/bin/bash
+#operacion potencia especifica
+number=$1
+tms=${#number}
+echo $(( number*(5**tms) ))
+echo "###################"
+echo $(( number*5**tms ))

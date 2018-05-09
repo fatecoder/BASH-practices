@@ -1,0 +1,16 @@
+
+Strings 
+
+palabra[indice] = letra de la palabra
+
+Length: len()
+
+lower()
+upper() #string.lower()
+str(): str(5) = '5'
+
+print "hello %s" % (string) #sustiye % dentro del string
+
+captured=raw_input("Write a number:")
+
+

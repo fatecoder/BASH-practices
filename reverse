@@ -1,0 +1,18 @@
+#!/bin/bash
+
+number=$1
+function reverse {
+  lnumber=$(($number/10))
+  resi=$(($number%10))
+  v=$v$resi
+  if [ $lnumber -ge  10 ];then
+    number=$lnumber
+    reverse
+  else
+    echo $v$lnumber
+  fi
+}
+if [ $number -gt 10 ];then
+  reverse
+fi
+#visto

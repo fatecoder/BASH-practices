@@ -1,0 +1,30 @@
+#!/bin/bash
+#mostrar todos lo multiplos del primero hasta el numero dado
+function multips {
+  v1=$1
+  v2=$2
+  if [ $v1 -gt $v2 ];then
+    temp=$v2
+    v2=$v1
+    v1=temp
+  fi
+  for (( i=$v1; i<=$v2; i=i+1 )); do
+    if [ $(($i%$v1)) -eq 0 ]; then
+      echo -n "$i "
+    fi
+  done
+  echo
+}
+
+function multips2 {
+  for ELEMENT in `eval echo "{$1..$2}"`;do
+    if [ $(($ELEMENT%$v1)) -eq 0 ];then
+      echo -n "$ELEMENT "
+    fi
+  done
+  echo
+}
+
+multips $1 $2
+
+multips2 $1 $2

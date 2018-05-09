@@ -1,0 +1,9 @@
+#!/bin/bash
+#extraer todas las URLs del archivo dado
+#( cat urls.txt | grep http | cut -d "\"" -f 4 | grep "^http" && cat urls.txt | grep http | cut -d "\"" -f 6 | grep "^http") | sort | uniq
+
+cat urls.txt | cut -d "\"" -f 4,6 | grep "^http" | sort | uniq
+
+#cat urls.txt | grep http | cut -d "=" -f 3 | grep "^\"http"
+
+#cat urls.txt | cut -d "\"" -f 4,6 | grep "^ht" | sort | uniq

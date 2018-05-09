@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#current shell $SHELL
+#cat /proc/$$/cmdline #solo funciona en la terminal
+
+#desktop environment
+printenv | grep XDG_CURRENT_DESKTOP | cut -d "=" -f 2
+
+#window manager
+#GDM = gmone display manager
+#cat /etc/X11/default-display-manager
+systemctl status display-manager | grep "Main PID" | cut -d "(" -f 2 | cut -d ")" -f 1
+#lslogins | grep "Display Manager" | cut -d " " -f 4
+
+
+#Get CPU model
+a=($(lscpu | grep "Model name" | cut -d ":" -f 2))
+echo ${a[@]}

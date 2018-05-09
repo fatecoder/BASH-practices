@@ -1,0 +1,3 @@
+#!/bin/bash
+#devolver el opuesto de un numero dado
+echo $(($1*-1))

@@ -1,0 +1,22 @@
+#!/bin/bash
+#remover espacios de texto
+#$1 cadena de texto
+function remove_spaces {
+  echo "Sin espacios"
+  for WORD in ${array[@]}; do
+    str=$str$WORD
+  done
+  echo $str
+}
+
+array=($1)
+remove_spaces array
+
+echo "#############"
+for PALABRA in $(cat nuevo); do
+  nstr=$nstr$PALABRA
+done
+echo $nstr
+
+echo "############"
+sed 's/ //g' nuevo

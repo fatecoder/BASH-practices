@@ -1,0 +1,11 @@
+#!/bin/bash
+#encontrar el digito contando de derecha a izquierda
+function find_digit {
+  string=$1
+  if [ $2 -le 0 ];then
+    echo "Nothing to do..."
+    exit 0
+  fi
+  echo ${string:$2*-1:1}
+}
+find_digit $1 $2

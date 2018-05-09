@@ -1,0 +1,5 @@
+#!/bin/bash
+echo Shell Name: $1
+
+echo Screen Resolution: $(xdpyinfo | grep dimensions | cut -d " " -f 7)
+

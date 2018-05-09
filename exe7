@@ -1,0 +1,26 @@
+#!/bin/bash
+#operaciones basicas
+function op {
+  echo "##################################"
+  echo -en 'Elige una opcion:\n1)Suma\n2)Resta\n3)Multiplicacion\n4)Division\n0)Salir\n:'
+  read o
+  if [ $o -eq 0 ] || [ $o -gt 4 ]; then
+    echo Saliendo...
+  else
+    echo -n "Valor 1: "
+    read v1
+    echo -n "Valor 2: "
+    read v2
+    case $o in
+      1) echo Resultado Suma: $(($v1+$v2))
+        op;;
+      2) echo Resultado Resta: $(($v1-$v2))
+        op;;
+      3) echo Resultado Multiplicacion: $(($v1*$v2))
+        op;;
+      4) echo Resultado Division: $(($v1/$v2))
+        op;;
+    esac
+ fi
+}
+op

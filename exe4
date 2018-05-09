@@ -1,0 +1,9 @@
+#!/bin/bash
+#determinar si es par o impar 
+function odd {
+  if [ $1 == 0 ]
+    then echo true
+    else echo false
+  fi
+}
+odd $(($1%2))

@@ -1,0 +1,9 @@
+#!/bin/bash
+#condicion
+function greeting {
+  case $1 in
+    DotNet) echo "Welcome $1!!!";;
+    *) echo "Hello $1";;
+  esac
+}
+greeting $1
